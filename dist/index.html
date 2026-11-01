@@ -1,82 +1,36 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#f7f3eb">
-  <meta name="description" content="Action ou vérité pour deux adultes. Des questions intimes, des défis sensuels et quatre ambiances pour votre soirée à deux.">
-  <title>Entre nous — Le jeu à deux</title>
-  <link rel="icon" type="image/svg+xml" href="icon.svg">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#3b0014"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="description" content="Un jeu de couple adulte avec quatre niveaux, une roue pour choisir le joueur, des actions, des vérités et vos propres défis.">
+  <title>Entre nous — Défis coquins</title><link rel="icon" type="image/svg+xml" href="icon.svg"><link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <svg class="svg-library" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs>
+  <svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+    <linearGradient id="pink-gloss" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffa1cb"/><stop offset=".45" stop-color="#ff387f"/><stop offset="1" stop-color="#bc004b"/></linearGradient>
+    <linearGradient id="pale-gloss" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffe3ed" stop-opacity=".65"/><stop offset="1" stop-color="#b54067" stop-opacity=".5"/></linearGradient>
+    <linearGradient id="fire-gloss" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffd5aa"/><stop offset=".5" stop-color="#ff668c"/><stop offset="1" stop-color="#ed0056"/></linearGradient>
     <symbol id="heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0l-1 1-1-1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></symbol>
-    <symbol id="spark" viewBox="0 0 24 24"><path d="m12 2 2.7 7.3L22 12l-7.3 2.7L12 22l-2.7-7.3L2 12l7.3-2.7L12 2Z"/></symbol>
-    <symbol id="flame" viewBox="0 0 24 24"><path d="M13 2c1 6-5 6-3 11-3-1-3-4-3-4-7 9 1 14 5 13 8 0 12-11 1-20Z"/><path d="M13 15c-4 2-3 6-1 7"/></symbol>
-    <symbol id="rings" viewBox="0 0 24 24"><circle cx="8" cy="12" r="6"/><circle cx="16" cy="12" r="6"/></symbol>
-    <symbol id="arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
-    <symbol id="shuffle" viewBox="0 0 24 24"><path d="m17 3 4 4-4 4M3 7h3c5 0 7 10 12 10h3M3 17h3c2 0 3-2 4-4m4-2c1-2 2-4 4-4h3m-4 6 4 4-4 4"/></symbol>
-    <symbol id="check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="back" viewBox="0 0 24 24"><path d="M20 12H4m7-7-7 7 7 7"/></symbol>
     <symbol id="close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
-    <symbol id="clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
-    <symbol id="settings" viewBox="0 0 24 24"><path d="M4 7h16M4 17h16"/><circle cx="9" cy="7" r="3"/><circle cx="16" cy="17" r="3"/></symbol>
+    <symbol id="check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="spark" viewBox="0 0 24 24"><path d="m12 2 2.7 7.3L22 12l-7.3 2.7L12 22l-2.7-7.3L2 12l7.3-2.7L12 2Z"/></symbol>
+    <symbol id="fire" viewBox="0 0 24 24"><path d="M13 2c1 6-5 6-3 11-3-1-3-4-3-4-7 9 1 14 5 13 8 0 12-11 1-20Z"/></symbol>
+    <symbol id="dice" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="8" cy="8" r="1"/><circle cx="16" cy="16" r="1"/><circle cx="12" cy="12" r="1"/></symbol>
+    <symbol id="cards" viewBox="0 0 24 24"><path d="m8 4 10 2a2 2 0 0 1 2 2l-2 12"/><rect x="3" y="6" width="12" height="15" rx="3"/><path d="m7 13 2 2 3-4"/></symbol>
+    <symbol id="quiz" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="4"/><path d="M9 8a3 3 0 1 1 4 3c-1 .4-1 1-1 2m0 4h.01"/></symbol>
+    <symbol id="user" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M4 22v-3a8 8 0 0 1 16 0v3Z"/></symbol>
+    <symbol id="people" viewBox="0 0 24 24"><circle cx="8" cy="6" r="3"/><circle cx="17" cy="7" r="2.5"/><path d="M2 19v-2a6 6 0 0 1 12 0v2m2-6a5 5 0 0 1 6 5v1"/></symbol>
+    <symbol id="clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="plus" viewBox="0 0 24 24"><path d="M12 4v16M4 12h16"/></symbol>
+    <symbol id="soft-art" viewBox="0 0 100 100"><path fill="url(#pink-gloss)" d="M67 48C50 30 34 48 44 64c5 8 15 16 23 21 17-11 30-22 28-34-2-14-21-17-28-3Z"/><path fill="url(#pale-gloss)" stroke="#ffc3db" stroke-opacity=".2" d="M39 30C19 9-1 30 10 50c7 12 18 23 34 32 20-14 36-29 33-44-3-18-26-23-38-8Z"/><path fill="url(#pink-gloss)" d="M74 13c-9-9-18 2-10 9l10 7 9-9c6-9-5-14-9-7Z"/></symbol>
+    <symbol id="hot-art" viewBox="0 0 100 100"><path fill="url(#pale-gloss)" d="M35 31C17 13-3 32 9 52c6 10 17 21 31 29 20-14 32-28 30-41-3-16-25-22-35-9Z"/><path fill="url(#fire-gloss)" d="M67 12c8 19-4 24-4 41-8-3-11-12-11-12C32 69 45 89 65 91c30 1 43-34 2-79Z"/><path fill="url(#fire-gloss)" d="M65 4c9-6 11 8 3 17-4-4-6-12-3-17Z"/><path stroke="#ffe2d1" stroke-width="4" stroke-linecap="round" opacity=".7" d="M72 45c5 9 6 15 3 21"/></symbol>
+    <symbol id="hard-art" viewBox="0 0 100 100"><path fill="url(#pink-gloss)" d="M45 6c7 17-3 23-6 34-6-6-9-13-9-13C3 64 23 89 49 90 81 90 94 46 65 20c4 21-13 24-20-14Z"/><path fill="#f71a74" d="m80 19-31 43h16L55 96l37-48H75Z"/><path fill="#ffe5ec" d="M44 54c6 10-1 11-2 18-5-1-6-5-6-5-10 14 2 22 11 15 10-7 5-17-3-28Z"/></symbol>
+    <symbol id="extreme-art" viewBox="0 0 100 100"><path fill="url(#pink-gloss)" d="M43 31C19 5-7 33 8 57c8 13 21 25 39 35 24-17 40-35 37-51-3-19-28-26-41-10Z"/><path stroke="#ee5594" stroke-width="4" stroke-linecap="round" d="m14 23 11 41M29 19l14 59M45 23l14 56M61 24l12 43"/><path fill="#ffdaec" d="m82 2 3 14 13 5-14 3-5 14-3-14-13-5 14-3Zm-8 37 2 6 6 2-6 2-2 6-2-6-6-2 6-2Z"/></symbol>
   </defs></svg>
-
-  <div class="site-shell">
-    <header class="masthead">
-      <a class="brand" href="./" aria-label="Entre nous, accueil"><span class="brand-mark"><svg><use href="#heart"/></svg></span>entre nous<span class="brand-dot">.</span></a>
-      <span class="header-note">Un téléphone. Deux envies de jouer.</span>
-      <button class="text-button rules-button" id="rules-open"><span class="help-icon">?</span><span>Les règles</span></button>
-    </header>
-
-    <main>
-      <section class="intro" aria-labelledby="page-title">
-        <div><p class="eyebrow"><span></span> LE RENDEZ-VOUS, C’EST VOUS</p><h1 id="page-title">Un peu de hasard.<br><em>Beaucoup de vous.</em></h1><p class="intro-copy">Des vérités qui rapprochent. Des défis qui font rougir.<br class="desktop-break"> Faites une pause à deux, le reste peut attendre.</p></div>
-        <div class="intro-stamp" aria-hidden="true"><svg><use href="#spark"/></svg><span>juste<br>nous deux</span><span class="stamp-line"></span></div>
-      </section>
-
-      <div class="game-layout">
-        <aside class="setup" id="setup">
-          <div class="section-title"><h2>Votre soirée, vos règles.</h2><span class="adult-label">18+</span></div>
-          <div class="name-fields"><label><span><i class="player-dot one"></i> TOI</span><input id="name-0" placeholder="Ton prénom" maxlength="24" autocomplete="off"></label><span class="name-amp">&</span><label><span><i class="player-dot two"></i> TON +1</span><input id="name-1" placeholder="Son prénom" maxlength="24" autocomplete="off"></label></div>
-          <fieldset class="moods"><legend>On met quelle ambiance ?</legend>
-            <button class="mood active" data-level="0" aria-pressed="true"><span class="mood-icon"><svg><use href="#heart"/></svg></span><span><strong>Douceur</strong><small>Des sourires et des papillons</small></span><span class="heat"><i></i><i></i><i></i><i></i></span></button>
-            <button class="mood" data-level="1" aria-pressed="false"><span class="mood-icon"><svg><use href="#rings"/></svg></span><span><strong>Complicité</strong><small>Un peu plus près, un peu plus vrai</small></span><span class="heat"><i></i><i></i><i></i><i></i></span></button>
-            <button class="mood" data-level="2" aria-pressed="false"><span class="mood-icon"><svg><use href="#flame"/></svg></span><span><strong>Désir</strong><small>Attirance, baisers et intimité</small></span><span class="heat"><i></i><i></i><i></i><i></i></span></button>
-            <button class="mood" data-level="3" aria-pressed="false"><span class="mood-icon"><svg><use href="#spark"/></svg></span><span><strong>Frisson</strong><small>Des envies qu’on ose se dire</small></span><span class="heat"><i></i><i></i><i></i><i></i></span></button>
-          </fieldset>
-          <label class="consent"><input type="checkbox" id="adult-consent"><span>Nous avons tous les deux 18 ans ou plus et envie de jouer.</span></label>
-          <p class="comfort"><svg><use href="#heart"/></svg> Tout se propose, rien ne s’impose.<br>Une carte ne vous plaît pas ? Passez-la.</p>
-          <button class="text-button restart" id="restart" hidden>↻ &nbsp; Recommencer la soirée</button>
-        </aside>
-
-        <section class="play-area" aria-label="Le jeu">
-          <div class="play-topline"><span id="turn-label"><i class="player-dot one"></i> À vous deux de jouer</span><button class="mobile-settings text-button" id="mobile-settings"><svg><use href="#settings"/></svg>Réglages</button><span class="round-label" id="round-label">LE PREMIER PAS ?</span></div>
-          <div class="card-stage">
-            <div class="back-card back-card-one"></div><div class="back-card back-card-two"></div>
-            <article class="game-card" id="game-card" data-level="0" aria-labelledby="card-text">
-              <div class="card-top"><span id="card-kind">LE JEU À DEUX</span><svg class="small-heart"><use href="#heart"/></svg></div>
-              <div class="card-body" aria-live="polite" aria-atomic="true"><div class="card-art" id="card-art" aria-hidden="true"><svg viewBox="0 0 180 130"><path class="heart-back" d="M89 36C61-7 2 17 19 57c9 21 34 43 67 62 35-23 63-51 62-74-2-36-48-41-59-9Z"/><path class="heart-front" d="M101 45C81 18 48 32 51 57c3 24 29 40 51 54 25-16 51-41 48-62-4-24-35-29-49-4Z"/><path class="art-spark" d="m153 10 3 9 9 3-9 3-3 9-3-9-9-3 9-3ZM26 94l2 6 6 2-6 2-2 6-2-6-6-2 6-2Z"/></svg></div><p class="card-kicker" id="card-kicker">DÉCONNECTEZ. RECONNECTEZ-VOUS.</p><h2 id="card-text">Ce soir,<br><em>on se choisit.</em></h2><p class="card-subtext" id="card-subtext">Choisissez une vérité, tentez une action<br>ou laissez le hasard vous surprendre.</p></div>
-              <div class="card-bottom"><span id="card-mood">DOUCEUR</span><span class="card-number" id="card-number">01 / 04 <svg><use href="#spark"/></svg></span></div>
-              <button class="favorite" id="favorite" aria-label="Ajouter la carte aux favoris" aria-pressed="false" hidden><svg><use href="#heart"/></svg></button>
-            </article>
-          </div>
-          <div class="draw-controls" id="draw-controls"><button class="draw-button truth" data-draw="truth"><svg><use href="#heart"/></svg><span>Vérité</span></button><button class="draw-button random" data-draw="random"><svg><use href="#shuffle"/></svg><span>Au hasard</span></button><button class="draw-button dare" data-draw="dare"><svg><use href="#flame"/></svg><span>Action</span></button></div>
-          <div class="answer-controls" id="answer-controls" hidden><button class="skip-button" id="skip">Passer <span>↗</span></button><button class="done-button" id="done">C’est fait <svg><use href="#check"/></svg></button></div>
-          <div class="play-footnote"><span id="progress-label">120 cartes pour sortir du quotidien</span><button class="text-button timer-toggle" id="timer-toggle" hidden><svg><use href="#clock"/></svg><span id="timer-label">Minuteur 30 s</span></button></div>
-        </section>
-      </div>
-
-      <section class="little-note"><span class="note-symbol" aria-hidden="true">✳</span><p>Le but n’est pas de gagner.<br><em>C’est de se retrouver.</em></p><button class="text-button" id="favorites-open"><svg><use href="#heart"/></svg>Vos favoris <span id="favorites-count">0</span></button></section>
-    </main>
-    <footer><span>entre nous. <span class="footer-light">Un petit jeu, un vrai moment.</span></span><span>À deux · À votre rythme · Sans pression</span></footer>
-  </div>
-
-  <dialog id="rules-dialog"><button class="dialog-close" data-close aria-label="Fermer"><svg><use href="#close"/></svg></button><span class="eyebrow">ON PREND LE TEMPS</span><h2>Les seules règles ?<br><em>Les vôtres.</em></h2><ol><li><b>Installez-vous à deux.</b> Un seul téléphone suffit. Entrez vos prénoms et choisissez l’ambiance.</li><li><b>Piochez à tour de rôle.</b> Vérité pour se confier, Action pour se surprendre, Au hasard pour lâcher prise.</li><li><b>Écoutez-vous.</b> Pour un geste à deux, demandez l’accord de l’autre. On peut changer d’avis à tout moment.</li><li><b>Passez librement.</b> Pas de gage, pas de points, pas de justification. L’ambiance peut changer entre deux cartes.</li></ol><p class="dialog-note">Un jeu pour adultes de 18 ans et plus. Les prénoms, la partie et les favoris restent dans ce navigateur. Jouez sur le même appareil ; il n’y a pas de partie à distance.</p><button class="done-button full-width" data-close>On a compris <svg><use href="#heart"/></svg></button></dialog>
-  <dialog id="favorites-dialog"><button class="dialog-close" data-close aria-label="Fermer"><svg><use href="#close"/></svg></button><span class="eyebrow">À GARDER ENTRE VOUS</span><h2>Vos petits<br><em>coups de cœur.</em></h2><div id="favorites-list"></div></dialog>
-  <dialog id="restart-dialog"><button class="dialog-close" data-close aria-label="Fermer"><svg><use href="#close"/></svg></button><h2>Une nouvelle<br><em>soirée ?</em></h2><p>Le tour et les cartes vues seront remis à zéro. Vos prénoms, votre ambiance et vos favoris restent.</p><div class="dialog-actions"><button class="skip-button" data-close>Continuer la partie</button><button class="done-button" id="restart-confirm">Recommencer</button></div></dialog>
-  <div class="toast" id="toast" role="status"></div>
+  <div class="app" id="app"><div id="screen"></div><nav class="bottom-nav" id="bottom-nav" aria-label="Navigation principale"></nav></div>
+  <dialog id="modal"><button class="icon-button close-modal" data-action="close-modal" aria-label="Fermer"><svg><use href="#close"/></svg></button><div id="modal-content"></div></dialog>
+  <div id="toast" class="toast" role="status"></div>
   <script src="cards.js"></script><script src="app.js"></script>
-</body>
-</html>
+</body></html>

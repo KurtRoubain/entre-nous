@@ -1,7 +1,7 @@
 /* Original prompts. No remote data or account is needed to play. */
 const DECKS = [
   {
-    name: 'Douceur',
+    name: 'Soft',
     truth: [
       'Quel détail chez moi t’a fait sourire la première fois ?',
       'Quel souvenir de nous deux aimerais-tu revivre ?',
@@ -38,18 +38,18 @@ const DECKS = [
     ]
   },
   {
-    name: 'Complicité',
+    name: 'Hot',
     truth: [
-      'Quelle facette de toi aimerais-tu que je découvre davantage ?',
+      'Quelle facette de ton charme aimerais-tu que je remarque davantage ?',
       'Comment sais-tu que tu peux vraiment te laisser aller avec moi ?',
       'Quelle attention te fait te sentir aimé·e sans qu’on ait besoin de mots ?',
       'Quelle question n’as-tu jamais pensé à me poser ?',
       'Qu’aimerais-tu qu’on fasse plus souvent rien que pour nous ?',
       'Quel moment de notre histoire t’a donné confiance en nous ?',
-      'Quelle surprise romantique te ferait le plus plaisir ?',
+      'Quel genre de flirt de ma part te fait le plus craquer ?',
       'Qu’est-ce qu’on fait particulièrement bien à deux ?',
       'Quand tu as besoin de réconfort, comment puis-je le comprendre ?',
-      'Quelle est ta façon préférée de recevoir de la tendresse ?',
+      'À quel moment as-tu le plus envie de m’embrasser ?',
       'Quel rêve aimerais-tu qu’on transforme en projet commun ?',
       'Quel petit rituel pourrait rendre nos retrouvailles encore meilleures ?',
       'Qu’est-ce que tu trouves romantique et que tu n’oses pas toujours demander ?',
@@ -60,8 +60,8 @@ const DECKS = [
       'Termine cette phrase trois fois : « Avec toi, j’aime… »',
       'Chuchote à ton +1 une chose que tu apprécies dans votre relation.',
       'À tour de rôle, proposez un souvenir à créer cette année. Choisissez votre préféré.',
-      'Propose à ton +1 un massage des mains pendant 30 secondes.',
-      'Décris ton rendez-vous idéal. Ton +1 peut ajouter trois détails.',
+      'Propose à ton +1 un massage des mains pendant 30 secondes, puis un baiser si vous en avez envie.',
+      'Invite ton +1 à choisir un baiser tendre ou spontané. Vous décidez ensemble de l’échanger.',
       'Écris mentalement un petit mot d’amour de deux phrases, puis dis-le à voix haute.',
       'Si ton +1 est d’accord, rapproche-toi et pose ton front contre le sien quelques secondes.',
       'Demande à ton +1 : « De quelle petite attention as-tu envie ce soir ? » Puis écoute.',
@@ -75,7 +75,7 @@ const DECKS = [
     ]
   },
   {
-    name: 'Désir',
+    name: 'Hard',
     truth: [
       'Quel type de baiser préfères-tu recevoir ?',
       'Qu’est-ce qui te fait te sentir désirable avec moi ?',
@@ -112,7 +112,7 @@ const DECKS = [
     ]
   },
   {
-    name: 'Frisson',
+    name: 'Extrême',
     truth: [
       'Y a-t-il une envie intime dont tu aimerais qu’on parle, sans pression de la réaliser ?',
       'Comment aimerais-tu qu’on se dise plus librement ce qu’on aime dans notre vie sexuelle ?',
