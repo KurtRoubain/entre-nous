@@ -1,0 +1,152 @@
+/* Original prompts. No remote data or account is needed to play. */
+const DECKS = [
+  {
+    name: 'Douceur',
+    truth: [
+      'Quel détail chez moi t’a fait sourire la première fois ?',
+      'Quel souvenir de nous deux aimerais-tu revivre ?',
+      'À quel moment te sens-tu le plus proche de moi ?',
+      'Quel petit geste de ma part rend ta journée meilleure ?',
+      'Si notre histoire était un film, quel serait son titre ?',
+      'Quelle chanson te fait penser à nous ?',
+      'Quel rendez-vous tout simple aimerais-tu qu’on organise ?',
+      'Quelle habitude de nous deux voudrais-tu garder longtemps ?',
+      'Quel compliment aimerais-tu m’entendre te dire plus souvent ?',
+      'Quelle chose un peu ridicule te fait craquer chez moi ?',
+      'Où aimerais-tu te réveiller avec moi un dimanche matin ?',
+      'Quel est ton souvenir le plus drôle de notre couple ?',
+      'Qu’aimerais-tu qu’on apprenne ensemble ?',
+      'À quel moment as-tu eu envie de me revoir au début ?',
+      'Quel petit bonheur aimerais-tu partager demain avec moi ?'
+    ],
+    dare: [
+      'Regardez-vous dans les yeux pendant 30 secondes, sans regarder le téléphone.',
+      'Fais trois compliments à ton +1 : un tendre, un drôle et un inattendu.',
+      'Choisis une chanson et invite ton +1 à danser pendant une minute.',
+      'Décris votre premier rendez-vous comme la bande-annonce d’un film.',
+      'Dessine un petit cœur avec le doigt dans la main de ton +1, avec son accord.',
+      'Faites un câlin le temps de trois grandes respirations, si vous en avez envie.',
+      'Invente un surnom beaucoup trop solennel pour ton +1.',
+      'Raconte votre rencontre en exactement cinq mots.',
+      'Propose à ton +1 un mini rendez-vous à faire cette semaine. Décidez du jour.',
+      'Imite gentiment une de tes propres habitudes qui fait rire ton +1.',
+      'Remercie ton +1 pour une petite chose récente que tu as remarquée.',
+      'Inventez ensemble votre poignée de main secrète.',
+      'Prends la main de ton +1, avec son accord, et raconte un souvenir heureux.',
+      'Fais deviner un souvenir commun en trois indices.',
+      'Dis à ton +1 une chose que tu as hâte de vivre ensemble.'
+    ]
+  },
+  {
+    name: 'Complicité',
+    truth: [
+      'Quelle facette de toi aimerais-tu que je découvre davantage ?',
+      'Comment sais-tu que tu peux vraiment te laisser aller avec moi ?',
+      'Quelle attention te fait te sentir aimé·e sans qu’on ait besoin de mots ?',
+      'Quelle question n’as-tu jamais pensé à me poser ?',
+      'Qu’aimerais-tu qu’on fasse plus souvent rien que pour nous ?',
+      'Quel moment de notre histoire t’a donné confiance en nous ?',
+      'Quelle surprise romantique te ferait le plus plaisir ?',
+      'Qu’est-ce qu’on fait particulièrement bien à deux ?',
+      'Quand tu as besoin de réconfort, comment puis-je le comprendre ?',
+      'Quelle est ta façon préférée de recevoir de la tendresse ?',
+      'Quel rêve aimerais-tu qu’on transforme en projet commun ?',
+      'Quel petit rituel pourrait rendre nos retrouvailles encore meilleures ?',
+      'Qu’est-ce que tu trouves romantique et que tu n’oses pas toujours demander ?',
+      'Qu’aimerais-tu que je comprenne mieux dans ta façon d’aimer ?',
+      'Si on avait une soirée entièrement libre demain, que choisirais-tu ?'
+    ],
+    dare: [
+      'Termine cette phrase trois fois : « Avec toi, j’aime… »',
+      'Chuchote à ton +1 une chose que tu apprécies dans votre relation.',
+      'À tour de rôle, proposez un souvenir à créer cette année. Choisissez votre préféré.',
+      'Propose à ton +1 un massage des mains pendant 30 secondes.',
+      'Décris ton rendez-vous idéal. Ton +1 peut ajouter trois détails.',
+      'Écris mentalement un petit mot d’amour de deux phrases, puis dis-le à voix haute.',
+      'Si ton +1 est d’accord, rapproche-toi et pose ton front contre le sien quelques secondes.',
+      'Demande à ton +1 : « De quelle petite attention as-tu envie ce soir ? » Puis écoute.',
+      'Choisissez chacun un mot pour décrire votre couple, puis expliquez votre choix.',
+      'Raconte une fois où ton +1 t’a impressionné·e et où tu ne l’as pas assez dit.',
+      'Propose un câlin et demande à ton +1 comment il ou elle aime être serré·e.',
+      'Inventez le nom de votre prochain rendez-vous secret et son programme.',
+      'Décris une qualité de ton +1 en utilisant uniquement une métaphore.',
+      'Faites-vous chacun une petite promesse réaliste pour cette semaine.',
+      'Propose de poser les téléphones pendant dix minutes après la partie, pour vous deux.'
+    ]
+  },
+  {
+    name: 'Désir',
+    truth: [
+      'Quel type de baiser préfères-tu recevoir ?',
+      'Qu’est-ce qui te fait te sentir désirable avec moi ?',
+      'Quelle ambiance t’aide à te sentir bien dans un moment intime ?',
+      'Quel geste de séduction de ma part te plaît le plus ?',
+      'Préfères-tu qu’on te surprenne ou qu’on fasse monter l’attente ?',
+      'Quel souvenir de baiser entre nous te revient en premier ?',
+      'Comment aimes-tu me faire comprendre que tu as envie de te rapprocher ?',
+      'Qu’est-ce que tu apprécies le plus dans notre intimité ?',
+      'Quel compliment sur ton charme te touche vraiment ?',
+      'Quel détail dans ma voix, mon regard ou mes gestes te fait craquer ?',
+      'Comment aimerais-tu qu’on parle de nos envies plus facilement ?',
+      'Quel endroit te semblerait idéal pour une escapade romantique en privé ?',
+      'Qu’est-ce qui t’aide à oublier le stress avant un moment à deux ?',
+      'Quelle musique choisirais-tu pour une soirée de séduction ?',
+      'Quelle tenue te fait te sentir particulièrement bien et sûr·e de toi ?'
+    ],
+    dare: [
+      'Demande à ton +1 le baiser dont il ou elle a envie. Échangez-le si vous êtes tous les deux partants.',
+      'Approche-toi de ton +1 et chuchote-lui un compliment sur son charme.',
+      'Propose à ton +1 une danse très rapprochée sur une chanson de votre choix.',
+      'Embrasse doucement la main de ton +1, avec son accord.',
+      'Laissez vos regards se croiser pendant 30 secondes. Puis dites ce qui vous a traversé l’esprit.',
+      'Invite ton +1 à choisir : un baiser, un câlin ou un compliment. Respecte son choix.',
+      'Si vous êtes d’accord, rapprochez-vous pour un baiser en prenant votre temps.',
+      'Propose à ton +1 un massage des épaules de 30 secondes et demande la pression souhaitée.',
+      'Décris à ton +1 trois détails qui le ou la rendent irrésistible à tes yeux.',
+      'Mets en scène, avec humour et charme, la façon dont tu draguerais ton +1 aujourd’hui.',
+      'Demande la permission de déposer un baiser sur la joue de ton +1, puis propose un deuxième.',
+      'Choisissez ensemble une lumière et une musique pour la suite de la soirée.',
+      'Assieds-toi près de ton +1 et dis-lui ce que tu trouves beau dans votre proximité.',
+      'Fais une invitation romantique à ton +1 comme si vous veniez tout juste de vous rencontrer.',
+      'Demande à ton +1 : « Comment as-tu envie que je te séduise ce soir ? » Écoute sa réponse.'
+    ]
+  },
+  {
+    name: 'Frisson',
+    truth: [
+      'Y a-t-il une envie intime dont tu aimerais qu’on parle, sans pression de la réaliser ?',
+      'Comment aimerais-tu qu’on se dise plus librement ce qu’on aime dans notre vie sexuelle ?',
+      'Quelle différence fais-tu entre tendresse, séduction et désir ?',
+      'Quelle limite aimerais-tu qu’on exprime plus facilement dans l’intimité ?',
+      'Qu’est-ce qui te permet de te sentir assez en confiance pour proposer une nouvelle envie ?',
+      'Préfères-tu prendre l’initiative ou recevoir une invitation ? Qu’est-ce qui te plaît dans ce choix ?',
+      'Qu’aimerais-tu qu’on prenne davantage le temps de savourer dans nos moments intimes ?',
+      'Comment aimerais-tu me dire « pas maintenant » tout en te sentant compris·e ?',
+      'Quel genre de message de flirt aimerais-tu recevoir de ma part ?',
+      'Qu’est-ce qui nourrit ton désir dans les petites choses du quotidien ?',
+      'Qu’aimerais-tu me demander sur mes envies sans avoir à deviner ma réponse ?',
+      'Quelle place aimerais-tu donner à la spontanéité dans notre intimité ?',
+      'Quelle attention te fait du bien après un moment intime ?',
+      'Quel souvenir de notre alchimie te donne encore des papillons ?',
+      'Si on inventait une soirée entièrement consacrée à notre intimité, quelle serait ta première envie ?'
+    ],
+    dare: [
+      'Propose une minute sans téléphone : très proches, échangez les baisers et les câlins qui vous font envie à tous les deux.',
+      'À tour de rôle, dites « Ce soir, j’aurais envie de… ». Accueillez la réponse sans obligation.',
+      'Invite ton +1 à choisir le prochain baiser : tendre, spontané ou tout en lenteur.',
+      'Faites chacun une invitation pour la suite de la soirée. Choisissez uniquement ce qui vous tente tous les deux.',
+      'Chuchote à ton +1 ce qui te plaît dans le fait de le ou la séduire encore aujourd’hui.',
+      'Mettez-vous d’accord sur une façon simple de dire « encore », « autrement » ou « stop » pendant vos moments à deux.',
+      'Propose un baiser de retrouvailles, comme après une longue absence, si ton +1 en a envie.',
+      'Dites chacun une chose que vous aimeriez garder, découvrir et mieux exprimer dans votre intimité.',
+      'Échangez trois compliments : sur votre attirance, votre complicité et votre confiance.',
+      'Choisis une chanson pour une danse rapprochée. Laisse ton +1 décider de la distance.',
+      'Propose à ton +1 deux façons de prolonger votre moment intime. Il ou elle peut en choisir une, ou en proposer une autre.',
+      'Prenez chacun une minute pour imaginer une escapade en amoureux, puis racontez-vous l’ambiance.',
+      'Demande à ton +1 quelle attention le ou la ferait se sentir particulièrement désiré·e ce soir.',
+      'Échangez un baiser si vous en avez envie, puis dites-vous ce que vous aimez dans votre façon de vous retrouver.',
+      'Propose de mettre le jeu en pause et de décider ensemble de la suite, à votre rythme.'
+    ]
+  }
+];
+const CARDS = DECKS.flatMap((deck, level) => ['truth', 'dare'].flatMap(type => deck[type].map((text, index) => ({ id: `${level}-${type}-${index}`, level, type, text }))));
